@@ -99,6 +99,31 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         )
     }
 
-    override fun onClick(p0: View?) {
+    override fun onClick(view: View?) {
+        when(view?.id) {
+            R.id.tv_option_one -> {
+                tvQuestion?.let {
+                    selectedOptionView(it, 1)
+                }
+            }
+
+            R.id.tv_option_two -> {
+                tvQuestion?.let {
+                    selectedOptionView(it, 2)
+                }
+            }
+
+            R.id.tv_option_three -> {
+                tvQuestion?.let {
+                    selectedOptionView(it, 3)
+                }
+            }
+
+            R.id.tv_option_four -> {
+                tvQuestion?.let {
+                    selectedOptionView(it, 4)
+                }
+            }
+        }
     }
 }
