@@ -40,6 +40,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         ivImage = findViewById(R.id.iv_image)
         btnSubmit = findViewById(R.id.btn_submit)
         mQuestionList = Constants.getQuestion()
+        tvOptionOne?.setOnClickListener(this)
         setQuestion()
         defaultOptionsView()
     }
