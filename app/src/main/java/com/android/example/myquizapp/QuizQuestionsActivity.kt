@@ -41,6 +41,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         btnSubmit = findViewById(R.id.btn_submit)
         mQuestionList = Constants.getQuestion()
         tvOptionOne?.setOnClickListener(this)
+        tvOptionTwo?.setOnClickListener(this)
+        tvOptionThree?.setOnClickListener(this)
+        tvOptionFour?.setOnClickListener(this)
+        btnSubmit?.setOnClickListener(this)
         setQuestion()
         defaultOptionsView()
     }
@@ -100,6 +104,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         )
     }
 
+
     override fun onClick(view: View?) {
         when(view?.id) {
             R.id.tv_option_one -> {
@@ -124,6 +129,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                 tvQuestion?.let {
                     selectedOptionView(it, 4)
                 }
+            }
+
+            R.id.btn_submit -> {
+
             }
         }
     }
